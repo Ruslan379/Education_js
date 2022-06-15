@@ -237,13 +237,65 @@
 ! ========================================
  */
 
-function getExtremeElements(array) {
-  // Change code below this line
+// function getExtremeElements(array) {
+//   // Change code below this line
+    
+//     // console.log(array)
+
+//     const arrayFirstLast = [];
+//     const LastElementArray = array[array.length - 1];
+
+//     arrayFirstLast[0] = array[0];
+//     arrayFirstLast[1] = LastElementArray;
 
 
-  // Change code above this line
+//     // console.log("FirstElement arrayFirstLast: " + arrayFirstLast[0]);
+//     // console.log("lastElement arrayFirstLast: " + arrayFirstLast[1]);
+//     // console.log("arrayFirstLast = [ , ]: " + arrayFirstLast);
+    
+//     console.log(arrayFirstLast);
+//     return arrayFirstLast
+
+//   // Change code above this line
+// }
+
+// // console.log(getExtremeElements([1, 2, 3, 4, 5]));
+// // console.log(getExtremeElements(["Earth", "Mars", "Venus"]));
+// // console.log(getExtremeElements(["apple", "peach", "pear", "banana"]));
+
+// getExtremeElements([1, 2, 3, 4, 5]);
+// getExtremeElements(["Earth", "Mars", "Venus"]);
+// getExtremeElements(["apple", "peach", "pear", "banana"]);
+
+
+/*
+* - Задача 10 (ОТВЕТ)
+! ========================================
+ */
+
+// function splitMessage(message, delimeter) {
+//     let words;
+//   // Change code below this line
+//     words = message.split(delimeter);
+//     console.log(words);
+//   // Change code above this line
+//   return words;
+// }
+
+// splitMessage("Mango hurries to the train", " ");
+// splitMessage("Mango", "");
+// splitMessage("best_for_week", "_");
+
+
+/*
+* - Задача 11 (ОТВЕТ)
+! ========================================
+ */
+
+function calculateEngravingPrice(message, pricePerWord) {
+   // Change code below this line
+
+
+
+   // Change code above this line
 }
-
-console.log(getExtremeElements([1, 2, 3, 4, 5]));
-console.log(getExtremeElements(["Earth", "Mars", "Venus"]));
-console.log(getExtremeElements(["apple", "peach", "pear", "banana"]));
