@@ -525,7 +525,7 @@
 // console.log(findLongestWord("May the force be with you"));
 
 /* 
-* - Задача 22 (ОТВЕТ) - Работает, НЕ ПРИНЯТО
+* - Задача 22 (ОТВЕТ) - Работает, но НЕ ПРИНЯТО
 ! ========================================
  */
 
@@ -796,26 +796,49 @@
 
 
 /* 
-* - Задача 32 (ОТВЕТ) 
+* - Задача 32 (ОТВЕТ) - Работает, но НЕ ПРИНЯТО
 ! ========================================
  */
 
+// function includes(array, value) {
+//     // Change code below this line
+//     let i;
+//     for (let i = 0; i < array.length; i += 1) {
+//         if (array[i] === value) {
+//             return(array[i] === value);
+//         } 
+//     // console.log(array[i] === value);
+//     }
+//     return(array[i] === value);
+// // Change code above this line
+// }
+
+// console.log(includes([1, 2, 3, 4, 5], 3));
+// console.log(includes([1, 2, 3, 4, 5], 17));
+// console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter"));
+// console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Uranus"));
+// console.log(includes(["apple", "plum", "pear", "orange"], "plum"));
+// console.log(includes(["apple", "plum", "pear", "orange"], "kiwi"));
+
+
+/* 
+* - Задача 32 (ОТВЕТ) - ПРИНЯТ!!!
+! ========================================
+ */
 function includes(array, value) {
-    // Change code below this line
-    let i;
+  // Change code below this line
+
     for (let i = 0; i < array.length; i += 1) {
         if (array[i] === value) {
-            return(array[i] === value);
+            return true;
         } 
     // console.log(array[i] === value);
     }
-    return(array[i] === value);
-// Change code above this line
+    return false;
+  // Change code above this line
 }
+/* 
+* - К О Н Е Ц
+! ========================================
+ */
 
-console.log(includes([1, 2, 3, 4, 5], 3));
-console.log(includes([1, 2, 3, 4, 5], 17));
-console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter"));
-console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Uranus"));
-console.log(includes(["apple", "plum", "pear", "orange"], "plum"));
-console.log(includes(["apple", "plum", "pear", "orange"], "kiwi"));
