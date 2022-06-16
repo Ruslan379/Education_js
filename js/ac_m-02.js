@@ -468,3 +468,354 @@
 ! ========================================
  */
 
+// const fruits = ['apple', 'plum', 'pear', 'orange'];
+
+// for (let i = 0; i < fruits.length; i += 1) { // Change this line
+//     const fruit = fruits[i]; // Change this line
+//     console.log(fruit);
+// }
+
+
+/* 
+* - Задача 20 (ОТВЕТ)
+! ========================================
+ */
+
+// function calculateTotalPrice(order) {
+//     let total = 0;
+//   // Change code below this line
+//     for (let i = 0; i < order.length; i += 1) { 
+//         total = total + order[i];
+//     }
+//   // Change code above this line
+//     return total;
+// }
+
+// console.log(calculateTotalPrice([12, 85, 37, 4]));
+// console.log(calculateTotalPrice([164, 48, 291]));
+// console.log(calculateTotalPrice([412, 371, 94, 63, 176]));
+
+
+/* 
+* - Задача 21 (ОТВЕТ)
+! ========================================
+ */
+
+// function findLongestWord(string) {
+//   // Change code below this line
+//     let array = [];
+//     array = string.split(" ");
+
+//     let arrayMaxWord = array[0];
+
+//     for (let i = 1; i < array.length; i += 1) { 
+//         // total = total + order[i];
+//         if (arrayMaxWord.length > array[i].length) {
+//             continue;
+//         }
+//         arrayMaxWord = array[i];
+//     }
+
+//     return arrayMaxWord;
+//   // Change code above this line
+// }
+
+// console.log(findLongestWord("The quick brown fox jumped over the lazy dog"));
+// console.log(findLongestWord("Google do a roll"));
+// console.log(findLongestWord("May the force be with you"));
+
+/* 
+* - Задача 22 (ОТВЕТ) - Работает, НЕ ПРИНЯТО
+! ========================================
+ */
+
+// function createArrayOfNumbers(min, max) {
+//   const numbers = [];
+//   // Change code below this line
+//     numbers[0] = min;
+
+//     for (let i = 1; i <= max - min; i += 1) { 
+//         numbers[i] = min + i;  // !
+//     }
+
+//   // Change code above this line
+//   return numbers;
+// }
+
+// console.log(createArrayOfNumbers(1, 3));
+// console.log(createArrayOfNumbers(14, 17));
+// console.log(createArrayOfNumbers(29, 34));
+
+
+/* 
+* - Задача 22 (ОТВЕТ) - ПРИНЯТ!!!
+! ========================================
+ */
+
+// function createArrayOfNumbers(min, max) {
+//     const numbers = [];
+//   // Change code below this line
+//     numbers[0] = min;
+
+//     for (let i = 1; i <= max - min; i += 1) { 
+//         numbers.push(min + i);
+//         // numbers[i] = min + i; // !
+//     }
+
+//   // Change code above this line
+//     return numbers;
+// }
+
+// console.log(createArrayOfNumbers(1, 3));
+// console.log(createArrayOfNumbers(14, 17));
+// console.log(createArrayOfNumbers(29, 34));
+
+
+/* 
+* - Задача 23 (ОТВЕТ) 
+! ========================================
+ */
+
+// function filterArray(numbers, value) {
+//    // Change code below this line
+//     const newArray = [];
+
+//     for (let i = 0; i < numbers.length; i += 1) { 
+
+//         if (numbers[i] <= value) {
+//             continue;
+//         }
+//         newArray.push(numbers[i]);
+//     }
+//     return newArray;
+//   // Change code above this line
+// }
+
+// console.log(filterArray([1, 2, 3, 4, 5], 3));
+// console.log(filterArray([1, 2, 3, 4, 5], 4));
+// console.log(filterArray([1, 2, 3, 4, 5], 5));
+// console.log(filterArray([12, 24, 8, 41, 76], 38));
+// console.log(filterArray([12, 24, 8, 41, 76], 20));
+
+
+/* 
+* - Задача 24 (ОТВЕТ) 
+! ========================================
+ */
+
+// function checkFruit(fruit) {
+//     const fruits = ["apple", "plum", "pear", "orange"];
+
+//     return(fruits.includes(fruit)); // Change this line
+// }
+
+// console.log(checkFruit("plum"));
+// console.log(checkFruit("mandarin"));
+// console.log(checkFruit("pear"));
+// console.log(checkFruit("Pear"));
+// console.log(checkFruit("apple"));
+
+
+/* 
+* - Задача 25 (ОТВЕТ) 
+! ========================================
+ */
+
+// function getCommonElements(array1, array2) {
+//   // Change code below this line
+//     const newArray = [];
+
+//     for (let i = 0; i < array1.length; i += 1) { 
+
+//         if (array2.includes(array1[i])) {
+//             newArray.push(array1[i]);
+//         }
+//     }
+//     return newArray;
+//  // Change code above this line
+// }
+
+// console.log(getCommonElements([1, 2, 3], [2, 4]));
+// console.log(getCommonElements([1, 2, 3], [2, 1, 17, 19]));
+// console.log(getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27]));
+// console.log(getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]));
+// console.log(getCommonElements([1, 2, 3], [10, 20, 30]));
+
+
+/* 
+* - Задача 26 (ОТВЕТ) 
+! ========================================
+ */
+
+// function calculateTotalPrice(order) {
+//     let total = 0;
+//   // Change code below this line
+
+//     for (const variable of order) {
+//     total += variable;
+//     }
+    
+//     // for (let i = 0; i < order.length; i += 1) {
+//     // total += order[i];
+//     // }
+
+//   // Change code above this line
+//     return total;
+    
+// }
+
+// console.log(calculateTotalPrice([12, 85, 37, 4]));
+// console.log(calculateTotalPrice([164, 48, 291]));
+// console.log(calculateTotalPrice([412, 371, 94, 63, 176]));
+// console.log(calculateTotalPrice([]));
+
+
+/* 
+* - Задача 27 (ОТВЕТ) 
+! ========================================
+ */
+
+// function filterArray(numbers, value) {
+//   // Change code below this line
+//     const filteredNumbers = [];
+
+//     for (const variable of numbers) {
+//         const number = variable;
+
+//         if (number > value) {
+//             filteredNumbers.push(number);
+//         }
+//     }
+
+//     // for (let i = 0; i < numbers.length; i += 1) {
+//     // const number = numbers[i];
+
+//     //     if (number > value) {
+//     //         filteredNumbers.push(number);
+//     //     }
+//     // }
+
+//     return filteredNumbers;
+//   // Change code above this line
+// }
+
+// console.log(filterArray([1, 2, 3, 4, 5], 3));
+// console.log(filterArray([1, 2, 3, 4, 5], 4));
+// console.log(filterArray([1, 2, 3, 4, 5], 5));
+// console.log(filterArray([12, 24, 8, 41, 76], 38));
+// console.log(filterArray([12, 24, 8, 41, 76], 20));
+
+
+/* 
+* - Задача 28 (ОТВЕТ) 
+! ========================================
+ */
+
+// // Change code below this line
+// const a = 3 % 3;
+// const b = 4 % 3;
+// const c = 11 % 8;
+// const d = 12 % 7;
+// const e = 8 % 3;
+
+// // console.log(a);
+// // console.log(b);
+// // console.log(c);
+// // console.log(d);
+// // console.log(e);
+
+
+/* 
+* - Задача 29 (ОТВЕТ) 
+! ========================================
+ */
+
+// function getEvenNumbers(start, end) {
+//    // Change code below this line
+//     const newArray = [];
+
+//     for (let i = start; i <= end; i += 1) { 
+
+//         if (i % 2 === 0) {
+//             newArray.push(i);
+//         }
+//     }
+
+//     return newArray;
+//     // Change code above this line
+// }
+
+// console.log(getEvenNumbers(2, 5));
+// console.log(getEvenNumbers(3, 11));
+// console.log(getEvenNumbers(6, 12));
+// console.log(getEvenNumbers(8, 8));
+// console.log(getEvenNumbers(7, 7));
+
+
+/* 
+* - Задача 30 (ОТВЕТ) 
+! ========================================
+ */
+
+// const start = 6;
+// const end = 27;
+// let number;
+
+// for (let i = start; i < end; i += 1) {
+//     if (i % 5 === 0) {
+//         number = i;
+//         break;
+//     }
+// }
+// console.log(number);
+
+
+/* 
+* - Задача 31 (ОТВЕТ) 
+! ========================================
+ */
+
+// function findNumber(start, end, divisor) {
+//   // Change code below this line
+//     // let number;
+
+//     for (let i = start; i < end; i += 1) {
+//         if (i % divisor === 0) {
+//             // number = i;
+//             return i;
+//         }
+//     }
+//     // return number;
+//   // Change code above this line
+// }
+
+// console.log(findNumber(2, 6, 5));
+// console.log(findNumber(8, 17, 3));
+// console.log(findNumber(6, 9, 4));
+// console.log(findNumber(16, 35, 7));
+
+
+/* 
+* - Задача 32 (ОТВЕТ) 
+! ========================================
+ */
+
+function includes(array, value) {
+    // Change code below this line
+    let i;
+    for (let i = 0; i < array.length; i += 1) {
+        if (array[i] === value) {
+            return(array[i] === value);
+        } 
+    // console.log(array[i] === value);
+    }
+    return(array[i] === value);
+// Change code above this line
+}
+
+console.log(includes([1, 2, 3, 4, 5], 3));
+console.log(includes([1, 2, 3, 4, 5], 17));
+console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter"));
+console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Uranus"));
+console.log(includes(["apple", "plum", "pear", "orange"], "plum"));
+console.log(includes(["apple", "plum", "pear", "orange"], "kiwi"));
