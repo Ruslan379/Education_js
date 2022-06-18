@@ -85,7 +85,7 @@ const findNames = function (names) {
                     break;
                 }
                 //! Условие: ________________________________________________________________________
-                
+
                 console.log("==================== Все ОК! Имена не совпвдают ====================");
 
                 arrUniqueNames.push(names[j]);
@@ -97,9 +97,9 @@ const findNames = function (names) {
             console.log("_______Имена не совпадают, идем дальше_______");   
         }   
 
-        // console.log(`2.1.Имя: ${arrNamesName}`);
-        // console.log(`2.2.Количество повторений: ${arrNamesNumRepet}`);
-        // console.log(`2.3.Позиции в массиве: ${arrNamesAllPosition}`);
+        // console.log(`3.1.Имя: ${arrNamesName}`);
+        // console.log(`3.2.Количество повторений: ${arrNamesNumRepet}`);
+        // console.log(`3.3.Позиции в массиве: ${arrNamesAllPosition}`);
         // console.log("======================================");
         
     };
