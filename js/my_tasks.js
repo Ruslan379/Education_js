@@ -1,21 +1,18 @@
 /* 
-* - Задача 1 (ОТВЕТ) - Работает, но НЕ ПРИНЯТО
+* - Задача 1 (Решена не полностью, без пункта 3.) 
 ! ========================================
-* - Есть список имен (nameAll). Напсать функция, которая и этого списка выводит в консоль следующие данные:
-* -  1.Количество элементов массива
-* -  2.Имя, количество его повторений в массиве, позицию в массиве
-* -  3.Количество неповторяющихся элементов массива
-* -  4.Все неповторяющиеся элементы массива
-
-
-console.log(`Количество повторений ${arrTotalNum}`);
-console.log(`Позиции в массиве ${arrTotalPosition}`);
-console.log("======================================");
-console.log(`Количество неповторяющихся элементов массива ${arrUniqueNum}`);
-console.log(`Все неповторяющиеся элементы массива ${arrUniqueTotal}`);
-
+* - Есть список имен (nameAll). 
+* - Напиши функция, которая выводит в консоль из этого списка следующие данные:
+* -  
+* -  1.Количество элементов (имен) массива //! Выполнено
+* -  2.Массив всех элементов (имен) //! Выполнено
+* -  3.Имя, количество его повторений в массиве, все позиции в массиве
+* -  4.Количество неповторяющихся элементов (имен) массива //! Выполнено
+* -  5.Массив неповторяющихся элементов (имен) //! Выполнено
+! ========================================
  */
 
+// Список имен:
 const nameAll =
     ["Polly",
     "Dashed",
@@ -40,25 +37,25 @@ const nameAll =
     "Foks",
     "Foks",
     "Vasya",
-    "Ben"];
+        "Ben"];
+    
 
 
+// !--------------------------- РЕШЕНИЕ: ---------------------------------------
 
 const findNames = function (names) {
-    console.table(names);
 
-    const arrTotal = names.length;
-    console.log(`1.Количество элементов массива: ${arrTotal}`);
-    console.log("======================================");
+    const arrNamesLength = names.length;
+    console.log(`1.Количество элементов массива: ${arrNamesLength}`); //! ОТВЕТ п.1
+    console.table(names); //! ОТВЕТ п.2
+    console.log("========================================================================");
 
-    let arrUniqueNames = ["T"]; // временный массив Всех элементов без повторения
-    let arrUniqueNamesAll = []; // ИТОГОВЫЙ массив Всех элементов без повторения
+    let arrUniqueNames = []; // ИТОГОВЫЙ массив Всех элементов без повторения
 
-        // let arrName = names[i]; // Имя
-        // let arrTotalNum = 0; // Количество повторений
-        // let inexNameNext = 0;
-
-        // inexNameNext = names.indexOf(names[i], inexNameNext) 
+    let arrNamesName; //! Имя элемнета +
+    let arrNamesNumRepet = 0; //! Количество повторений элемента в массиве +
+    let arrNamesAllPosition = 0; //! Все позициии элемента в массиве +
+    let inexNamesNext = 0; //! Пока не знаю зачем нужна -
 
     for (let i = 0; i < names.length; i += 1) {
 
@@ -67,67 +64,53 @@ const findNames = function (names) {
             console.log("i=", i, "names[i]: ", names[i]);
             console.log("j=", j, "names[j]: ", names[j]);
 
-            // let arrUniqueName = []; // временный массив одного элемента без повторений?
 
             if (names[i] === names[j]) {
 
-                let arrUniqueName = []; // временный массив одного элемента без повторений?
+                let arrTempName = []; // временный массив одного элемента без повторений
                 
-                arrUniqueName.push(names[j]);
-                console.log("временный массив одного элемента: ", arrUniqueName);
-                console.log("ИТОГОВЫЙ массив Всех элементов без повторения ДО: ", arrUniqueNamesAll);
+                arrTempName.push(names[j]);
+                console.log("временный массив одного элемента arrTempName: ", arrTempName);
+                console.log("ИТОГОВЫЙ массив Всех элементов без повторения ДО: ", arrUniqueNames);
 
-                //! тут надо поставить условие: если names[i] уже сущесвует в массиве arrUniqueNamesAll, то  прерываем цикл
-                // let a = arrUniqueNamesAll.includes(names[i]) === arrUniqueName.includes(names[j]) ? "ДА" : "no";
+                //! Условие: если names[j] уже сущесвует в массиве arrUniqueNames, то  прерываем цикл
+                // let a = arrUniqueNames.includes(names[i]) === arrTempName.includes(names[j]) ? "ДА" : "no";
                 // console.log(a);
 
-                console.log("== Проверка на совпадение имен в arrUniqueNamesAll и в arrUniqueName: ==");
+                console.log("== Проверка на совпадение имен в arrUniqueNames и в arrTempName: ==");
 
-                if (arrUniqueNamesAll.includes(names[i]) === arrUniqueName.includes(names[j])) { 
+                if (arrUniqueNames.includes(names[i]) === arrTempName.includes(names[j])) { 
                     console.log("----!-!-!-!----Такой элемент в массиве уже есть!----!-!-!-!----");
                     console.log("____________----!-!-!-!--- ПЕРЕХОД ----!-!-!-!----_____________");
                     break;
                 }
-
+                //! Условие: ________________________________________________________________________
+                
                 console.log("==================== Все ОК! Имена не совпвдают ====================");
 
-                arrUniqueNamesAll.push(names[j]);
-                console.log("ИТОГОВЫЙ массив Всех элементов без повторения ПОСЛЕ: ", arrUniqueNamesAll);
-                console.log("===== ИМЕНА СОВПАЛИ, ИМЯ добавлено в массив arrUniqueNamesAll ======");
+                arrUniqueNames.push(names[j]);
+                console.log("ИТОГОВЫЙ массив Всех элементов без повторения ПОСЛЕ: ", arrUniqueNames);
+                console.log("===== ИМЕНА СОВПАЛИ, ИМЯ добавлено в массив arrUniqueNames ======");
                 console.log("__________________________ СЛЕДУЮЩИЙ ЦИКЛ __________________________");
                 break;
             };
             console.log("_______Имена не совпадают, идем дальше_______");   
-
-
-
-
-
-            // console.log(arrUniqueName);
-            // console.log(arrUniqueNames);
-            // arrUniqueNamesAll = arrUniqueNames.concat(arrUniqueName);
-            // console.log(arrUniqueNamesAll);
-            // console.log("======================================");
         }   
-        // break;
-        // arrUniqueNamesAll = arrUniqueNames.concat(arrUniqueName);
-        // console.log(arrUniqueName);
 
-        // console.log(`2.1.Имя: ${arrName}`);
-        // console.log(`2.2.Количество повторений: ${arrTotalNum}`);
-        // console.log(`2.3.Позиции в массиве: ${arrTotalPosition}`);
+        // console.log(`2.1.Имя: ${arrNamesName}`);
+        // console.log(`2.2.Количество повторений: ${arrNamesNumRepet}`);
+        // console.log(`2.3.Позиции в массиве: ${arrNamesAllPosition}`);
         // console.log("======================================");
         
     };
-    console.log("++++++++++++ ИТОГОВЫЙ массив Всех элементов без повторения: ++++++++++++");
-    console.table(arrUniqueNamesAll);
 
-
-
-// console.log(`3.1.Количество неповторяющихся элементов массива ${arrUniqueNamesTotal}`);
-// console.log(`3.2.Все неповторяющиеся элементы массива ${arrUniqueNames}`);
+    console.log("========================================================================");
+    const arrUniqueNamesLength = names.length;
+    console.log(`1.Количество неповторяющиеся элементов (имен) массива: ${arrUniqueNamesLength}`); //! ОТВЕТ п.4
+    console.log("++++++++ ИТОГОВЫЙ массив неповторяющихся элементов (имен): ++++++++");
+    console.table(arrUniqueNames); //! ОТВЕТ п.5
 
 };
 
 
-findNames(nameAll); // Обращение к фукции (запуск)
+findNames(nameAll); // Обращение к фукции (вызов функции)
