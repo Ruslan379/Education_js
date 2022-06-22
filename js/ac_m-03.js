@@ -285,10 +285,7 @@
 // for (const key in apartment) {
 //   // Change code below this line
 
-//   if (apartment.hasOwnProperty(key)) {
-//     keys.push(key);
-//     values.push(apartment[key]);
-//   }
+//   
 //   // Change code above this line
 // }
 // console.log(keys);
@@ -300,14 +297,110 @@
 ! ========================================
  */
 
-function countProps(object) {
-  let propCount = 0;
+// function countProps(object) {
+//   let propCount = 0;
+//   // Change code below this line
+//   for (const key in object) {
+//     if (object.hasOwnProperty(key)) {
+//       propCount += 1;
+//     }
+//   }
+//   // Change code above this line
+//   return propCount;
+// }
+
+// console.log(countProps({}));
+// console.log(countProps({ name: "Mango", age: 2 }));
+// console.log(countProps({ mail: "poly@mail.com", isOnline: true, score: 500 }));
+
+
+/*
+* - Задача 13
+! ========================================
+ */
+
+// const apartment = {
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+// };
+// const values = [];
+// // Change code below this line
+// const keys = Object.keys(apartment);
+// console.log(keys);
+
+// for (const key of keys) {
+//   // console.log(key);
+//   values.push(apartment[key]);
+//   // console.log(apartment[key]);
+// }
+
+// console.log(values);
+
+/*
+* - Задача 14
+! ========================================
+ */
+
+// function countProps(object) {
+//   // Change code below this line
+//   let propCount = 0;
+//   // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//   // const keys = Object.keys(object); //! правильное решение 1 вариант
+//   // // console.log(keys); 
+//   // propCount = keys.length; //! правильное решение 1 вариант
+//   // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+//   propCount = Object.keys(object).length; //! работает 2 вариант, 
+  
+//   // for (const key in object) {
+//   //   if (object.hasOwnProperty(key)) {
+//   //     propCount += 1;
+//   //   }
+//   // }
+
+//   // return Object.keys(object).length; //! работает 3 вариант
+
+//   return propCount;
+//   // Change code above this line
+// }
+
+// console.log(countProps({}));
+// console.log(countProps({ name: "Mango", age: 2 }));
+// console.log(countProps({ mail: "poly@mail.com", isOnline: true, score: 500 }));
+
+
+/*
+* - Задача 15
+! ========================================
+ */
+
+// const apartment = {
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+// };
+
+// const keys = Object.keys(apartment); //! правильное решение
+// const values = Object.values(apartment); //! правильное решение
+
+// // console.log(keys);
+// // console.log(values);
+
+// // Change code below this line
+// // const keys = apartment;
+// // const values = apartment;
+
+
+/*
+* - Задача 16
+! ========================================
+ */
+
+function countTotalSalary(salaries) {
+  let totalSalary = 0;
   // Change code below this line
 
   // Change code above this line
-  return propCount;
+  return totalSalary;
 }
-
-console.log(countProps({}));
-console.log(countProps({ name: "Mango", age: 2 }));
-
