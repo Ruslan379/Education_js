@@ -404,3 +404,5 @@ function countTotalSalary(salaries) {
   // Change code above this line
   return totalSalary;
 }
+
+

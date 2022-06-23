@@ -238,41 +238,57 @@
 * - 
 ! ========================================
  */
+//! My changes:
 
-// const propName = "name";
+// const autorName = "name";
+
+// console.log(autorName);
+
+
 // const user = {
 //   age: 25,
-//   // Имя этого свойства будет взято из значения переменной propName
-//   [propName]: "Генри Сибола",
+//   // Имя этого свойства (ключа) будет взято из значения переменной autorName
+//   [autorName]: "Генри Сибола",
 // };
 
-// console.log(user.name); // 'Генри Сибола'
+// console.log(user);
 
+// user[autorName] = prompt("Please enter desired hotel name"); //! Work v.1
+// // user["name"] = prompt("Please enter desired hotel name"); //! Work v.2
+// // user.name = prompt("Please enter desired hotel name"); //! Work v.3
+
+// console.log(user.name); // 'Генри Сибола'
 // console.log(user);
 
 /*
 * - 
 ! ========================================
  */
+//! My changes:
 
 // // ✅ Логически и синтаксически сгруппированные сущности
 // const bookShelf = {
 //   books: ["The Last Kingdom", "Dream Guardian"],
 //   // Это метод объекта
 //   getBooks() {
-//     console.log("Этот метод будет возвращать все книги - свойство books");
+//     console.log("Этот метод будет возвращать все книги до добавления новых - свойство ключа books");
+//     console.log( bookShelf.books);
 //   },
 //   // Это метод объекта
 //   addBook(bookName) {
-//     console.log("Этот метод будет добавлять новую книгу в свойство books");
-//     console.log(bookName);
+//     console.log("Этот метод будет добавлять новые книги в свойство свойство ключа books");
+//     // bookShelf.books.push(bookName); //! Work v.1 - old
+//     this.books.push(bookName); //! Work v.2 - new
+//     console.log(bookName); // Возвращает новую добавленную книгу
+//     console.log(this.books); // Возвращает новые свойства ключа books"
 //   },
 // };
 
 // // Вызовы методов
 // bookShelf.getBooks();
-// bookShelf.addBook("Новая книга1", "Новая книга2", "Новая книга3", "Новая книга4");
-
+// bookShelf.addBook("Новая книга1");
+// bookShelf.addBook("Новая книга2");
+// bookShelf.addBook("Новая книга3");
 // console.log(bookShelf);
 
 /*
@@ -329,6 +345,7 @@
 //   rating: 8.38,
 // };
 
+
 // for (const key in book) {
 //   // Ключ
 //   console.log(key);
@@ -337,28 +354,37 @@
 //   // console.log(book.key); //! - НЕ работает!!!
 // }
 
+// console.log(book);
+
+
 /*
 * - 
 ! ========================================
  */
+//! My changes:
 
 // const animal = {
 //   legs: 4,
 // };
-// const dog = Object.create(animal);
+// // const dog = Object.create(animal); // создаёт и возвращает новый объект dog, СВЯЗЫВАЯ его с объектом animal
+// const dog = {}; // создаёт и возвращает новый объект dog, НЕ СВЯЗЫВАЯ его с объектом animal
 // dog.name = "Манго";
 
 // console.log(dog); // {name: 'Манго'}
 // console.log(dog.name); // 'Манго'
-// console.log(dog.legs); // 4
+// console.log(dog.legs); // 4 или undefined (если const dog = {};)
 
 // console.log(animal);
+// console.log("===========================");
 
-// // ❌ Возвращает true для всех свойств
+// // ❌ Возвращает true или false (если const dog = {};) для всех свойств
+// console.log(dog.name); // 'Манго'
 // console.log("name" in dog); // true
-// console.log("legs" in dog); // true
+// console.log(dog.legs); // 4 или undefined (если const dog = {};)
+// console.log("legs" in dog); // true или false (если const dog = {};)
 
 // // ✅ Возвращает true только для собственных свойств
+// console.log("===========================");
 // console.log(dog.hasOwnProperty("name")); // true
 // console.log(dog.hasOwnProperty("legs")); // false
 
@@ -380,62 +406,109 @@
 //     console.log(key);
 //     console.log(book[key]);
 //   }
-
-//   // Если это не собственное свойство - ничего не делаем
+// //   // Если это не собственное свойство - ничего не делаем
 // }
 
 /*
 * - 
 ! ========================================
  */
+//! My changes:
 
 // const book = {
 //   title: "The Last Kingdom",
 //   author: "Bernard Cornwell",
 //   genres: ["historical prose", "adventure"],
 //   rating: 8.38,
+
+//   showKeys(showAllKeys = {}) {
+//     console.log("Этот метод будет показывать все ключи");
+
+//     // const allkeys = Object.keys(book); //! Work v.1 - old
+//     // console.log(allkeys); //! Work v.2.1 - new
+
+//     // const allkeys = Object.keys(this); //! Work v.2.1 - new
+//     // showAllKeys = allkeys; //! Work v.2.1 - new
+//     // console.log(showAllKeys); //! Work v.2.1 - new
+
+//     // showAllKeys = Object.keys(this); //! Work v.2.2 - new
+//     // console.log(showAllKeys);
+    
+//     console.log(Object.keys(this)); //! Work v.2.3 - new
+//   },
 // };
-// const keys = Object.keys(book);
-// console.log(keys); // ['title', 'author', 'genres', 'rating']
-// console.log(typeof keys); // object
+
+// book.showKeys();
+
+// // const keys = Object.keys(book);
+// // console.log(keys); // ['title', 'author', 'genres', 'rating']
+// // console.log(typeof keys); // object
+
 
 /*
 * - 
 ! ========================================
  */
+//! My changes:
 
 // const book = {
 //   title: "The Last Kingdom",
 //   author: "Bernard Cornwell",
 //   genres: ["historical prose", "adventure"],
 //   rating: 8.38,
+
+//   showKeysValues() {
+//     console.log("Этот метод будет показывать все ключи и их значения");
+
+//     const keys = Object.keys(this);
+
+//     for (const key of keys) {
+//       // Ключ
+//       console.log(key);
+//       // Значение свойства
+//       // console.log(this[key]);
+//       // console.log(book[key]); //! Work old
+//     }
+    
+//     const values = Object.values(book);
+
+//     for (const value of values) {
+//     console.log(value);
+//     }
+//   },
 // };
-// const keys = Object.keys(book);
-// console.log(keys);
-// console.log("__________________________");
 
-// for (const key of keys) {
-//   // Ключ
-//   console.log(key);
-//   // Значение свойства
-//   console.log(book[key]);
-// }
+// // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// book.showKeysValues();
+// // console.log(showKeysValues); // НЕ РАБОТАЕТ!
 
-/*
-* - 
-! ========================================
- */
+// // ================================================================
+// // const keys = Object.keys(book);
+// // console.log(keys);
+// // console.log("__________________________");
 
-// const book = {
-//   title: "The Last Kingdom",
-//   author: "Bernard Cornwell",
-//   rating: 8.38,
-// };
-// const keys = Object.keys(book);
-// console.log(keys); // ['title', 'author', 'rating']
+// // for (const key of keys) {
+// //   // Ключ
+// //   console.log(key);
+// //   // Значение свойства
+// //   console.log(book[key]);
+// // }
 
-// const values = Object.values(book);
-// console.log(values); // ['The Last Kingdom', 'Bernard Cornwell', 8.38]
+// /*
+// * - 
+// ! ========================================
+//  */
+
+// // const book = {
+// //   title: "The Last Kingdom",
+// //   author: "Bernard Cornwell",
+// //   rating: 8.38,
+// // };
+// // const keys = Object.keys(book);
+// // console.log(keys); // ['title', 'author', 'rating']
+
+// // const values = Object.values(book);
+// // console.log(values); // ['The Last Kingdom', 'Bernard Cornwell', 8.38]
 
 /*
 * - 
@@ -528,7 +601,6 @@ for (const book of books) {
   bookNames.push(book.title);
   bookAuthor.push(book.author);
     // bookAuthor.push(book["author"]); //! 2-ой вариант, РАБОТАЕТ!!!
-
 }
 
 console.log(bookNames);
