@@ -801,20 +801,20 @@
 ! ========================================
  */
 
-function makeTask(data) {
-  const completed = false;
-  const category = "General";
-  const priority = "Normal";
-  // Change code below this line
-  return {completed, category, priority, ...data} 
-  // Change code above this line
-}
+// function makeTask(data) {
+//   const completed = false;
+//   const category = "General";
+//   const priority = "Normal";
+//   // Change code below this line
+//   return {completed, category, priority, ...data} 
+//   // Change code above this line
+// }
 
-console.log(makeTask({}));
-console.log(makeTask({ category: "Homemade", priority: "Low", text: "Take out the trash" }));
-console.log(makeTask({ category: "Finance", text: "Take interest" }));
-console.log(makeTask({ priority: "Low", text: "Choose shampoo" }));
-console.log(makeTask({ text: "Buy bread" }));
+// console.log(makeTask({}));
+// console.log(makeTask({ category: "Homemade", priority: "Low", text: "Take out the trash" }));
+// console.log(makeTask({ category: "Finance", text: "Take interest" }));
+// console.log(makeTask({ priority: "Low", text: "Choose shampoo" }));
+// console.log(makeTask({ text: "Buy bread" }));
 
 
 /*
@@ -822,6 +822,107 @@ console.log(makeTask({ text: "Buy bread" }));
 ! ========================================
  */
 
+// // Change code below this line
+// function add(...args) {
+//   // Change code above this line
+//   // console.log(args);
+//   let sum = 0;
+//   for (const el of args) {
+//     // console.log(el);
+//     sum += el;
+//   }
+//   return sum;
+// }
+
+// console.log(add(15, 27));
+// console.log(add(12, 4, 11, 48));
+// console.log(add(32, 6, 13, 19, 8));
+// console.log(add(74, 11, 62, 46, 12, 36));
 
 
+/*
+* - Задача 32
+! ========================================
+ */
 
+// // Change code below this line
+// function addOverNum(...args) {
+//   let total = 0;
+
+//   for (let i = 0; i < args.length; i +=1) {
+//     // const element = args[i];
+//     // console.log(args[i]);
+//     if (args[i] > args[0] ) {
+//       total += args[i];
+//     }
+//     continue;
+//   }
+//   // for (const arg of args) {
+//   //   total += arg;
+//   // }
+
+//   return total;
+//   // Change code above this line
+// }
+
+// console.log(addOverNum(50, 15, 27));
+// console.log(addOverNum(10, 12, 4, 11, 48, 10, 8));
+// console.log(addOverNum(15, 32, 6, 13, 19, 8));
+// console.log(addOverNum(20, 74, 11, 62, 46, 12, 36));
+
+
+/*
+* - Задача 32
+! ========================================
+ */
+
+// // Change code below this line
+// function findMatches(arr1, ...arr2) {
+//   const matches = []; // Don't change this line
+
+//   console.log("+++++++++++++++++++++++++++++++++++++");
+//   console.log(arr1);
+//   console.log(arr2);
+
+//   for (let i = 0; i < arr2.length; i += 1) {
+      
+//     let y = arr2[i];
+//       console.log("_______________________");
+//       console.log("arr2 : ", y);
+
+//     for (let j = 0; j < arr1.length; j += 1) {
+      
+//       let x = arr1[j];
+//       console.log("arr2 =", y, "arr1 =", x);
+
+//       if (y === x ) {
+//       matches.push(y);
+//       }
+//     }
+//   }
+//   // Change code above this line
+//   return matches;
+// }
+
+// console.log(findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7));
+// console.log(findMatches([4, 89, 17, 36, 2], 8, 17, 89, 27, 2));
+// console.log(findMatches([10, 24, 41, 6, 9, 19], 24, 11, 9, 23, 41));
+// console.log(findMatches([63, 11, 8, 29], 4, 7, 16));
+
+
+/*
+* - Задача 33
+! ========================================
+ */
+
+const bookShelf = {
+  // Change code below this line
+  books: ["The last kingdom", "The guardian of dreams"],
+  getBooks() {
+    return "Returning all books";
+  },
+  addBook(bookName) {
+    return `Adding book ${bookName}`;
+  },
+  // Change code above this line
+};
