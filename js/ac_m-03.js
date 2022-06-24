@@ -1087,30 +1087,79 @@ const atTheOldToad = {
   getPotions() {
     return this.potions;
   },
+
   addPotion(newPotion) {
-    if (this.potions.includes(newPotion)) {
-      return `Error! Potion ${newPotion} is already in your inventory!`;
-    }
+    for (const potion of this.potions) {
+      // console.log("+++++++++++++++++++++++++++++++++"); //! Проверки в косоле
+      // console.log("potion.name =", potion.name); //! Проверки в косоле
+      // console.log("newPotion.name =", newPotion.name); //! Проверки в косоле
+
+      if (newPotion.name === potion.name) {
+      return `Error! Potion ${newPotion.name} is already in your inventory!`;
+      };
+    };
 
     this.potions.push(newPotion);
+    return this.potions; //! Добавлен
   },
-  removePotion(potionName) {
-    const potionIndex = this.potions.indexOf(potionName);
+
+    removePotion(potionName) {
+      // const potionIndex = this.potions.indexOf(potionName);
+      // console.log(this.potions); //!
+      // console.log(potionName); //!
+      // console.log(potionIndex); //!
+
+
+    let potionIndex = -1;
+    for (let i = 0; i < this.potions.length; i +=1 ) {
+      if (this.potions[i].name === potionName) {
+        potionIndex = i;
+        console.log(potionIndex); //!
+      }
+      // console.log(potionIndex); //!
+    }
 
     if (potionIndex === -1) {
       return `Potion ${potionName} is not in inventory!`;
     }
 
-    this.potions.splice(potionIndex, 1);
+      this.potions.splice(potionIndex, 1);
+      return this.potions; //! Добавлен
   },
+    
   updatePotionName(oldName, newName) {
-    const potionIndex = this.potions.indexOf(oldName);
+    console.log(newName);
+    // const potionIndex = this.potions.indexOf(oldName);
+    for (const potion of this.potions) {
+      // console.log(potion); //!
+      // console.log(potion.name); //!
+      if (potion.name === oldName) {
+        potion.name = newName;
 
-    if (potionIndex === -1) {
-      return `Potion ${oldName} is not in inventory!`;
-    }
+        console.log(potion.name);
+      };
+    };
 
-    this.potions.splice(potionIndex, 1, newName);
+    // if (potionIndex === -1) {
+    //   return `Potion ${oldName} is not in inventory!`;
+    // }
+
+    // this.potions.splice(potionIndex, 1, newName);
+    return this.potions; //! Добавлен
   },
   // Change code above this line
 };
+
+console.log(atTheOldToad.getPotions());
+
+console.log(atTheOldToad.addPotion({ name: "Invisibility", price: 620 })); //!
+console.log(atTheOldToad.addPotion({ name: "Dragon breath", price: 700 }));
+console.log(atTheOldToad.addPotion({ name: "Stone skin", price: 240 }));
+
+console.log(atTheOldToad.removePotion("Dragon breath")); // [ { name: "Speed potion", price: 460 }, { name: "Stone skin", price: 520 } ]
+console.log(atTheOldToad.removePotion("Speed potion"));  // [ { name: "Dragon breath", price: 780 }, { name: "Stone skin", price: 520 } ]
+
+console.log(atTheOldToad.updatePotionName("Dragon breath", "Polymorth")); // [{ name: "Speed potion", price: 460 }, { name: "Polymorth", price: 780 }, { name: "Stone skin", price: 520 } ]
+console.log(atTheOldToad.updatePotionName("Stone skin", "Invulnerability potion")); // [{ name: "Speed potion", price: 460 }, { name: "Dragon breath", price: 780 }, { name: "Invulnerability potion", price: 520 } ]
+
+
