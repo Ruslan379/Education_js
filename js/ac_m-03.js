@@ -1141,7 +1141,7 @@ const atTheOldToad = {
     };
 
     // if (potionIndex === -1) {
-    //   return `Potion ${oldName} is not in inventory!`;
+    //   return `Potion ${oldName} is not in inventory!`; 
     // }
 
     // this.potions.splice(potionIndex, 1, newName);

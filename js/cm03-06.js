@@ -31,12 +31,14 @@
 ! ========================================
  */
 
-// const temps = [14, -4, 25, 8, 11];
-// console.log(temps);
+const temps = [14, -4, 25, 8, 11];
+console.log(temps);
 
-// // Это точная, но независимая копия массива temps
-// const copyOfTemps = [...temps];
-// console.log(copyOfTemps); // [14, -4, 25, 8, 11]
+// Это точная, но независимая копия массива temps
+
+// const copyOfTemps1 = (...temps); //! ОШИБКА 
+const copyOfTemps = [...temps];
+console.log(copyOfTemps); // [14, -4, 25, 8, 11]
 
 /*
 * - 
@@ -450,23 +452,24 @@
 * - 
 ! ========================================
  */
-// ДЕСТРУКТУРИЗИРУЕМ в сигнатуре (подписи) функции
-function doStuffWithBook({ title, numberOfPages, downloads, rating, isPublic }) {
-    
-  // Делаем что-то со свойствами объекта
-    console.log(title);
-    console.log(numberOfPages);
-    // И так далее
-}
 
-// ✅ Всё понятно
-doStuffWithBook({
-  title: "The Last Kingdom",
-  numberOfPages: 736,
-  downloads: 10283,
-  rating: 8.38,
-  isPublic: true,
-});
+// ДЕСТРУКТУРИЗИРУЕМ в сигнатуре (подписи) функции
+// function doStuffWithBook({ title, numberOfPages, downloads, rating, isPublic }) {
+    
+//   // Делаем что-то со свойствами объекта
+//     console.log(title);
+//     console.log(numberOfPages);
+//     // И так далее
+// }
+
+// // ✅ Всё понятно
+// doStuffWithBook({
+//   title: "The Last Kingdom",
+//   numberOfPages: 736,
+//   downloads: 10283,
+//   rating: 8.38,
+//   isPublic: true,
+// });
 
 /*
 * - 
