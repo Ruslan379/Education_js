@@ -1163,3 +1163,8 @@ console.log(atTheOldToad.updatePotionName("Dragon breath", "Polymorth")); // [{ 
 console.log(atTheOldToad.updatePotionName("Stone skin", "Invulnerability potion")); // [{ name: "Speed potion", price: 460 }, { name: "Dragon breath", price: 780 }, { name: "Invulnerability potion", price: 520 } ]
 
 
+
+/* 
+* - К О Н Е Ц
+! ========================================
+ */

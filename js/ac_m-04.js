@@ -2543,11 +2543,50 @@ const users = [
   }
 ];
 
-const getTotalBalanceByGender = (users, gender) => {
 
+//! 1-й вариант - ПРИНЯТ!!!
+// const getTotalBalanceByGender = (users, gender) => {
 
-};
+//   const f = users.filter(user => user.gender === gender);
+//   // console.log(f);
+
+//   const r = f.reduce((total, fOne) => {
+//   return total + fOne.balance;
+//   }, 0);
+
+//   return r;
+// };
 // Change code above this line
+
+//! 2-й вариант - ПРИНЯТ!!!
+const getTotalBalanceByGender = (users, gender) => {
+  return ((users.filter(user => user.gender === gender))).reduce((total, fOne) => {
+        return total + fOne.balance;
+    }, 0)
+};
+
+
+//! 3-й вариант - ПРИНЯТ!!!
+// const getTotalBalanceByGender = (users, gender) => 
+//     users
+//     .filter(user => user.gender === gender)
+//     .reduce((total, fOne) => total + fOne.balance, 0)
+
 
 console.log(getTotalBalanceByGender(users, "male"));
 console.log(getTotalBalanceByGender(users, "female"));
+
+
+
+
+/* 
+* - К О Н Е Ц
+! ========================================
+ */
+
+
+
+
+
+
+

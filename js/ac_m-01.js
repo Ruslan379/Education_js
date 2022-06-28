@@ -788,4 +788,11 @@ checkForSpam("Trust me, this is not a spam message"); // true
 checkForSpam("Get rid of sPaM emails. Our book in on sale!"); // true
 checkForSpam("[SPAM] How to earn fast money?"); // true
 
-// ! =================== F I N I S H =====================
+
+
+
+/* 
+* - К О Н Е Ц
+! ========================================
+ */
+
