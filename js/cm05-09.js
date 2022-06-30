@@ -86,28 +86,33 @@
 
 // function showThis() {
 //   console.log("this in showThis: ", this);
+//   // return this;
+//   // return `this in showThis: ${this}`;
+//   return ("this in showThis: ", this);
 // }
 
 // // Вызываем в глобальном контексте
-// showThis(); // this in showThis: Window
-
+// // showThis(); // this in showThis: Window
+// console.log(showThis()); // this in showThis: Window
+ 
 // const user = {
-//   username: "Mango",
+//   username: "Mango", 
 // };
 
-// console.log(user);
+// console.log(user); // {username: 'Mango'}
 
 // // Записываем ссылку на функцию в свойство объекта
 // // Обратите внимание, что это не вызов - нет ()
 // user.showContext = showThis;
 
-// console.log(user);
+// console.log(user);  // {username: 'Mango', showContext: ƒ}
 
 
 // // Вызываем функцию в контексте объекта
 // // this будет указывать на текущий объект, в контексте
 // // которого осуществляется вызов, а не на глобальный объект.
-// user.showContext(); // this in showThis: {username: "Mango", showContext: ƒ}
+// // user.showContext(); // this in showThis: {username: "Mango", showContext: ƒ}
+// console.log(user.showContext());
 
 /*
 * - 
@@ -118,7 +123,7 @@
 //   firstName: "Jacob",
 //   lastName: "Mercer",
 //   getFullName() {
-//     //   return `${this.firstName} ${this.lastName}`; // НЕ сработает при вызове этой ф-ции как callback
+//       return `${this.firstName} ${this.lastName}`; // НЕ сработает при вызове этой ф-ции как callback
 //       return `${customer.firstName} ${customer.lastName}`;
 //   },
 // };
@@ -130,7 +135,14 @@
 //   console.log(`Обрабатываем заявку от ${callback()}.`);
 // }
 
-// makeMessage(customer.getFullName); // Будет ошибка при вызове функции
+
+// //! ❌ так НЕ правильно:
+// // makeMessage(customer.getFullName); // Будет ошибка при вызове функции если return `${this.firstName} ${this.lastName}`
+
+
+// //* ✅ так ПРАВИЛЬНО:
+// makeMessage(customer.getFullName.bind(customer)); // Обрабатываем заявку от Jacob Mercer.
+
 
 /*
 * - 
@@ -150,6 +162,8 @@
 // const user = {
 //   username: "Mango",
 // };
+
+// console.log(user);
 
 // //! добавление метода showThis в объект user
 // user.showContext = showThis;
@@ -193,6 +207,8 @@
 
 // function greetGuest(greeting) {
 //   console.log(`${greeting}, ${this.username}.`);
+//   console.log(`${greeting}, ${mango.username}.`);
+//   console.log(`${greeting}, ${poly.username}.`);
 // }
 
 // const mango = {
@@ -202,7 +218,11 @@
 //   username: "Поли",
 // };
 
+
+// // greetGuest("Добро пожаловать"); // Добро пожаловать, Манго.
+
 // greetGuest.call(mango, "Добро пожаловать"); // Добро пожаловать, Манго.
+
 // greetGuest.call(poly, "С приездом"); // С приездом, Поли.
 
 /*
@@ -210,8 +230,10 @@
 ! ========================================
  */
 
-// function greetGuest(greeting) {
-//   console.log(`${greeting}, ${this.username}.`);
+// const arr = ["Добро пожаловать", "в страну", "восходящего", "солнца"]
+
+// function greetGuest(greeting1 = "", greeting2 = "", greeting3 = "", greeting4 = "") {
+//   console.log(`${greeting1} ${greeting2} ${greeting3} ${greeting4}, ${this.username}.`);
 // }
 
 // const mango = {
@@ -221,8 +243,9 @@
 //   username: "Поли",
 // };
 
-// greetGuest.apply(mango, ["Добро пожаловать"]); // Добро пожаловать, Манго.
-// greetGuest.apply(poly, ["С приездом"]); // С приездом, Поли.
+// // greetGuest.apply(mango, ["Добро пожаловать", "в страну", "восходящего", "солнца"]); // Добро пожаловать в страну восходящего солнца, Манго.
+// greetGuest.apply(mango, arr); // Добро пожаловать в страну восходящего солнца, Манго.
+// greetGuest.apply(poly, ["С приездом"]); // С приездом   , Поли.
 
 
 /*
@@ -257,24 +280,24 @@
 ! ========================================
  */
 
-const customer = {
-  firstName: "Jacob",
-  lastName: "Mercer",
-  getFullName() {
-    return `${this.firstName} ${this.lastName}`;
-  },
-};
+// const customer = {
+//   firstName: "Jacob",
+//   lastName: "Mercer",
+//   getFullName() {
+//     return `${this.firstName} ${this.lastName}`;
+//   },
+// };
 
-function makeMessage(callback) {
-  // callback() это вызов метода getFullName без объекта
-  console.log(`Обрабатываем заявку от ${callback()}.`);
-}
+// function makeMessage(callback) {
+//   // callback() это вызов метода getFullName без объекта
+//   console.log(`Обрабатываем заявку от ${callback()}.`);
+// }
 
-// makeMessage(customer.getFullName); // Будет ошибка при вызове функции
+// // makeMessage(customer.getFullName); // Будет ошибка при вызове функции
 
 
-// ✅ Стало
-makeMessage(customer.getFullName.bind(customer)); // Обрабатываем заявку от Jacob Mercer.
+// // ✅ Стало
+// makeMessage(customer.getFullName.bind(customer)); // Обрабатываем заявку от Jacob Mercer.
 
 /*
 * - 

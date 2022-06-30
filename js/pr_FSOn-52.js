@@ -54,7 +54,6 @@
 //     alert("Введите число")
 // }
 
-
 /*
 * - 
 ! ========================================
@@ -83,19 +82,18 @@
 ! ========================================
  */
 
-const showThis = () => {
-    console.log("This in showThis: ", this);
-}
+// const showThis = () => {
+//     console.log("This in showThis: ", this);
+// }
 
-showThis();
+// showThis();
 
-const user = { name: "Mango" };
-user.showContext = showThis;
+// const user = { name: "Mango" };
+// user.showContext = showThis;
 
-console.log(user);
+// console.log(user);
 
-user.showContext();
-
+// user.showContext();
 
 
 /*
@@ -103,7 +101,13 @@ user.showContext();
 ! ========================================
  */
 
-
+// //? =======================================
+// // new Date()
+// console.log("new Date():", new Date()); //!
+// //? =======================================
+// // Date.now () 
+// console.log("Date.now:", Date.now ()); //!
+// //? =======================================
 
 /*
 * - 
