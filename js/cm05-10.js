@@ -324,6 +324,7 @@
 //   static #takenEmails = [];
 
 //   static isEmailTaken(email) {
+//     // console.log(this);
 //     // return User.#takenEmails.includes(email);
 //     return this.#takenEmails.includes(email); //! РАБОТАЕТ
 //   }
@@ -331,7 +332,9 @@
 //   #email;
 
 //   constructor({ email }) {
+//     // console.log(this);
 //     this.#email = email;
+//     // console.log(this);
 //     User.#takenEmails.push(email);
 //     // this.#takenEmails.push(email); //! НЕ РАБОТАЕТ
 //   }
@@ -365,7 +368,11 @@
 // }
 
 // class ContentEditor extends User {
-//   // Тело класса ContentEditor
+//   constructor(email) {
+//     // Вызов конструктора родительского класса User
+//     super(email);
+//     // this.posts = posts;
+//   }
 // }
 
 // const editor = new ContentEditor("mango@mail.com");
@@ -414,39 +421,39 @@
 
 //! ___Методы дочернего класса___
 
-// Объявление класса User
-class User {
-  constructor(email) {
-    this.email = email;
-  }
+// // Объявление класса User
+// class User {
+//   constructor(email) {
+//     this.email = email;
+//   }
 
-  get email() {
-    return User.email; //! this тут НЕ РАБОТАЕТ!!!
-  }
+//   get email() {
+//     return User.email; //! this тут НЕ РАБОТАЕТ!!!
+//   }
 
-  set email(newEmail) {
-    User.email = newEmail; //! this тут НЕ РАБОТАЕТ!!!
-  }
-}
+//   set email(newEmail) {
+//     User.email = newEmail; //! this тут НЕ РАБОТАЕТ!!!
+//   }
+// }
 
-// Представим что выше есть объявление класса User
+// // Представим что выше есть объявление класса User
 
-class ContentEditor extends User {
-  constructor({ email, posts }) {
-    super(email);
-    this.posts = posts;
-  }
+// class ContentEditor extends User {
+//   constructor({ email, posts }) {
+//     super(email); //! псевдоним конструктора родительского класса
+//     this.posts = posts;
+//   }
 
-  addPost(post) {
-    this.posts.push(post);
-  }
-}
+//   addPost(post) {
+//     this.posts.push(post);
+//   }
+// }
 
-const editor = new ContentEditor({ email: "mango@mail.com", posts: [] });
-console.log(editor); // { email: 'mango@mail.com', posts: [] }
-console.log(editor.email); // 'mango@mail.com'
-editor.addPost("post-1");
-console.log(editor.posts); // ['post-1']
+// const editor = new ContentEditor({ email: "mango@mail.com", posts: [] });
+// console.log(editor); // { email: 'mango@mail.com', posts: [] }
+// console.log(editor.email); // 'mango@mail.com'
+// editor.addPost("post-1");
+// console.log(editor.posts); // ['post-1']
 
 /*
 * - 
