@@ -1,8 +1,11 @@
 /*
-* - Conspect Module - 3_5
-
+* - Conspect Module - 6_12
+TODO
 ! ========================================
  */
+
+// TODO
+//! ___События. Метод addEventListener()___
 
 
 
