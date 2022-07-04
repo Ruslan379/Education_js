@@ -1,4 +1,6 @@
 
+/* ! ________cm06-11________  */
+
  /*! ___Свойство classList___ */
 /* body {
     margin: 24px;
@@ -76,7 +78,7 @@
 } */
 
 /* ! ___Метод insertAdjacentHTML()___  */
-body {
+/* body {
     padding: 16px;
 }
 
@@ -113,4 +115,178 @@ body {
 
 .list-item:not(:last-child) {
     margin-bottom: 8px;
+} */
+
+
+/* ================================================================================= */
+/* ! ________cm06-12________  */
+
+/*! ___События. Метод addEventListener()___ */
+
+/*? ++++++++++++++++++++_3_++++++++++++++++++++++++ */
+/* body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 1rem;
+    text-align: center;
+} */
+
+/*! ___События. Метод removeEventListener()___ */
+/*! ___События. Объект события___ */
+/* body {
+    padding: 16px;
+    text-align: center;
+} */
+
+/*! ___Действия браузера по умолчанию___ */
+/* body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.register-form input {
+    margin-bottom: 16px;
+    padding: 8px 12px;
+}
+
+.register-form button {
+    padding: 12px;
+} */
+
+/*! ___Свойства key и code___ */
+/*? +++++++++_2_+++++++++++++ */
+/* body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.log-list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 24px;
+    margin-top: 16px;
+}
+
+.log-item {
+    position: relative;
+    padding: 8px;
+    border: 1px dashed #2a2a2a;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: monospace;
+}
+
+.log-item>.chip {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    width: 20px;
+    height: 20px;
+    background-color: green;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.log-list li:not(:last-child) {
+    margin-bottom: 4px;
+}
+
+button {
+    display: inline-flex;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-family: inherit;
+    text-transform: uppercase;
+} */
+
+
+/*! ___События элементов форм___ */
+/*! ___Событие submit___ */
+/* body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 32px;
+} */
+
+/*! ___Событие changet___ */
+/* body {
+    margin: 16px;
+}
+
+select {
+    padding: 4px;
+} */
+
+/*! ___Событие input___ */
+/* body {
+    margin: 16px;
+    line-height: 1.5;
+    font-family: sans-serif;
+    letter-spacing: 0.5px;
+}
+
+p {
+    overflow-wrap: anywhere;
+}
+
+input {
+    width: 100%;
+    max-width: 320px;
+    padding: 8px;
+    font: inherit;
+    letter-spacing: inherit;
+} */
+
+/*! ___События focus и blur___ */
+body {
+    margin: 16px;
+    line-height: 1.5;
+    font-family: sans-serif;
+    letter-spacing: 0.5px;
+}
+
+input {
+    width: 100%;
+    max-width: 320px;
+    padding: 8px;
+    font: inherit;
+    letter-spacing: inherit;
+}
+
+button {
+    display: inline-flex;
+    padding: 4px;
+    margin-right: 2px;
+    margin-left: 2px;
 }
