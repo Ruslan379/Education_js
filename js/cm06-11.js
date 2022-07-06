@@ -37,60 +37,60 @@
 
 //! ___Поиск элементов___
 
-const listWithId = document.querySelector('#menu');
-listWithId.style.textTransform = 'uppercase';
-listWithId.style.fontSize = '24px';
-console.log("🚀 listWithId = document.querySelector('#menu'):", listWithId);
+// const listWithId = document.querySelector('#menu');
+// listWithId.style.textTransform = 'uppercase';
+// listWithId.style.fontSize = '24px';
+// console.log("🚀 listWithId = document.querySelector('#menu'):", listWithId);
 
-const listWithClass = document.querySelector('.menu');
-console.log("🚀 listWithClass = document.querySelector('.menu'):", listWithClass);
+// const listWithClass = document.querySelector('.menu');
+// console.log("🚀 listWithClass = document.querySelector('.menu'):", listWithClass);
 
-const menuItemsByTagName = document.querySelectorAll("li");
-console.log(menuItemsByTagName);
+// const menuItemsByTagName = document.querySelectorAll("li");
+// console.log(menuItemsByTagName);
 
-const menuItemsByClass = document.querySelectorAll(".menu-item");
-console.log(menuItemsByClass);
+// const menuItemsByClass = document.querySelectorAll(".menu-item");
+// console.log(menuItemsByClass);
 
-//! изменяет цвет и размер каждого элемента li (item), кроме последнего, на tomato и 34px
-for (const iterator of menuItemsByClass) {
-    iterator.style.color = 'tomato';
-    iterator.style.fontSize = '34px';
-}
+// //! изменяет цвет и размер каждого элемента li (item), кроме последнего, на tomato и 34px
+// for (const iterator of menuItemsByClass) {
+//     iterator.style.color = 'tomato';
+//     iterator.style.fontSize = '34px';
+// }
 
-const firstMenuItem = document.querySelector(".menu-item");
-// firstMenuItem.style.color = 'tomato';
-firstMenuItem.style.color = 'green';
-firstMenuItem.style.fontSize = '44px';
-console.log(firstMenuItem);
-
-
-console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-
-// const body = document.body;
-// console.log("🚀 body = document.body", body)
+// const firstMenuItem = document.querySelector(".menu-item");
+// // firstMenuItem.style.color = 'tomato';
+// firstMenuItem.style.color = 'green';
+// firstMenuItem.style.fontSize = '44px';
+// console.log(firstMenuItem);
 
 
-// const list = body.firstElementChild;
-// console.log("🚀 list = body.firstElementChild", list)
+// console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+
+// // const body = document.body;
+// // console.log("🚀 body = document.body", body)
 
 
-// const firstListItem = list.firstElementChild;
-// console.log("🚀 firstListItem = list.firstElementChild", firstListItem)
+// // const list = body.firstElementChild;
+// // console.log("🚀 list = body.firstElementChild", list)
 
-//! изменяет цвет и размер последнего элемента li (item) на blue и 54px
-const lastListItem = document.body.firstElementChild.lastElementChild;
-lastListItem.style.color = 'blue';
-lastListItem.style.fontSize = '54px';
-console.log("🚀 lastListItem = list.lastElementChild", lastListItem);
-// или так:
-console.log(document.body.firstElementChild.lastElementChild);
 
-console.log(document.querySelector("blog")); //! не ищет по имени ???
-// console.log(document.body.firstElementChild.lastElementChild.value); //! не ищет по value ???
+// // const firstListItem = list.firstElementChild;
+// // console.log("🚀 firstListItem = list.firstElementChild", firstListItem)
 
-//! не ищет по value ???
-const a = document.body.firstElementChild.lastElementChild; 
-console.log("🚀 a:", a.value);
+// //! изменяет цвет и размер последнего элемента li (item) на blue и 54px
+// const lastListItem = document.body.firstElementChild.lastElementChild;
+// lastListItem.style.color = 'blue';
+// lastListItem.style.fontSize = '54px';
+// console.log("🚀 lastListItem = list.lastElementChild", lastListItem);
+// // или так:
+// console.log(document.body.firstElementChild.lastElementChild);
+
+// console.log(document.querySelector("blog")); //! не ищет по имени ???
+// // console.log(document.body.firstElementChild.lastElementChild.value); //! не ищет по value ???
+
+// //! не ищет по value ???
+// const a = document.body.firstElementChild.lastElementChild; 
+// console.log("🚀 a:", a.value);
 
 /*
 * - 
@@ -273,17 +273,17 @@ console.log("🚀 a:", a.value);
 //! ___Создание элементов___
 //? Элемент создается в памяти, в DOM его еще нет.
 
-// const heading = document.createElement("h1");
-// console.log(heading); // h1
-// console.log(heading.textContent); // пустая строка
+const heading = document.createElement("h1");
+console.log(heading); // h1
+console.log(heading.textContent); // пустая строка
 
-// heading.textContent = "This is a heading";
-// console.log(heading.textContent); // This is a heading
+heading.textContent = "This is a heading";
+console.log(heading.textContent); // This is a heading
 
-// const image = document.createElement("img");
-// image.src = "https://placeimg.com/640/480/nature";
-// image.alt = "Nature";
-// console.log(image); // <img src="https://placeimg.com/640/480/nature" alt="Nature" />
+const image = document.createElement("img");
+image.src = "https://placeimg.com/640/480/nature";
+image.alt = "Nature";
+console.log(image); // <img src="https://placeimg.com/640/480/nature" alt="Nature" />
 
 
 /*

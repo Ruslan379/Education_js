@@ -1,5 +1,5 @@
 
-/* ! ________cm06-11________  */
+/* * ________cm06-11________  */
 
  /*! ___Свойство classList___ */
 /* body {
@@ -119,7 +119,7 @@
 
 
 /* ================================================================================= */
-/* ! ________cm06-12________  */
+/* * ________cm06-12________  */
 
 /*! ___События. Метод addEventListener()___ */
 
@@ -269,7 +269,7 @@ input {
 } */
 
 /*! ___События focus и blur___ */
-body {
+/* body {
     margin: 16px;
     line-height: 1.5;
     font-family: sans-serif;
@@ -289,4 +289,69 @@ button {
     padding: 4px;
     margin-right: 2px;
     margin-left: 2px;
+} */
+
+
+/* * ________cm07-13________  */
+
+/*! ___Всплытие событий___ */
+/*! ___Свойство event.target___ */
+/*! ___Прекращение всплытия___ */
+/* #parent,
+#child,
+#descendant {
+    margin: 16px;
+    padding: 16px;
+    border: 4px solid #212121;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+#parent {
+    background-color: #673ab7;
+}
+
+#child {
+    background-color: #448aff;
+}
+
+#descendant {
+    background-color: #ff9800;
+} */
+
+/*! ___Делегирование событий. Палитра цветов___ */
+body {
+  margin: 8px;
+  font-family: sans-serif;
+}
+
+.output {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.color-palette {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+  gap: 4px;
+}
+
+.color-palette .item {
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 4px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: transform 250ms ease-in-out;
+}
+
+.color-palette .item:hover {
+  transform: scale(1.1);
 }
