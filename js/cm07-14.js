@@ -1,14 +1,20 @@
 /*
-* - Conspect Module - 9_00
+* - Conspect Module - 7_14
 TODO
 ! ========================================
  */
 // TODO
 
 
-//! ___События. Метод addEventListener()___
+//! ___Throttle и Debounce___
 
+const output = document.querySelector(".output");
+let scrollEventCounter = 0;
 
+document.addEventListener("scroll", () => {
+  scrollEventCounter += 1;
+  output.textContent = scrollEventCounter;
+});
 
 /*
 * - 
