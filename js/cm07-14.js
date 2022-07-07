@@ -6,23 +6,34 @@ TODO
 // TODO
 
 
-//! ___Throttle и Debounce___
+//! ___Chatty events scroll___
 
-const output = document.querySelector(".output");
-let scrollEventCounter = 0;
+// const output = document.querySelector(".output");
+// let scrollEventCounter = 0;
+// console.log(scrollEventCounter);
 
-document.addEventListener("scroll", () => {
-  scrollEventCounter += 1;
-  output.textContent = scrollEventCounter;
-});
+// document.addEventListener("scroll", () => {
+//   scrollEventCounter += 1;
+//   console.log(output.textContent);
+//   console.log(scrollEventCounter);
+
+//   output.textContent = scrollEventCounter;
+// });
 
 /*
 * - 
 ! ========================================
  */
+//! ___Подключение библиотеки Lodash___
 
+console.log(_);
+console.dir(_);
 
+console.log(_.isEmpty({})); // true
+console.log(_.isEmpty({ a: 1 })); // false
 
+const result = _.add(2, 3);
+console.log(result); // 5
 /*
 * - 
 ! ========================================

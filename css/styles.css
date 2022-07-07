@@ -360,14 +360,16 @@ button {
 
 /* * ________cm07-14________  */
 
-/*! ___Throttle и Debounce___ */
-body {
-  height: 5000vh;
+/*! ___Chatty events scroll___ */
+/*? height: 5000vh; - самый важный параметр 
+/*?   для работы скрипта - длина scroll */
+/* body {
+  height: 5000vh; 
   font-family: sans-serif;
   line-height: 1.5;
   color: #212121;
   background-color: #f5f5f5;
-}
+} 
 
 .cta {
   display: flex;
@@ -407,4 +409,4 @@ body {
 .event-counter span {
   font-size: 48px;
   font-family: monospace;
-}
+} */
