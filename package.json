@@ -1,0 +1,22 @@
+{
+  "name": "education_js",
+  "version": "1.0.0",
+  "description": "## Введение",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ruslan379/Education_js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ruslan379/Education_js/issues"
+  },
+  "homepage": "https://github.com/Ruslan379/Education_js#readme",
+  "dependencies": {
+    "validator": "^13.7.0"
+  }
+}
